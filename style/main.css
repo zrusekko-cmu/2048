@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: #E0F7FA;
+  color: #005f73;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
@@ -16,6 +16,7 @@ body {
   clear: both; }
 
 h1.title {
+  color: #0077B6;
   font-size: 80px;
   font-weight: bold;
   margin: 0;
@@ -53,7 +54,7 @@ h1.title {
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: #0077B6;
   padding: 15px 25px;
   font-size: 25px;
   height: 25px;
@@ -72,7 +73,7 @@ h1.title {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: #eee4da; }
+    color: #B2EBF2; }
   .score-container .score-addition, .best-container .score-addition {
     position: absolute;
     right: 30px;
@@ -80,7 +81,7 @@ h1.title {
     font-size: 25px;
     line-height: 25px;
     font-weight: bold;
-    color: rgba(119, 110, 101, 0.9);
+    color: #FFFFFF;
     z-index: 100;
     -webkit-animation: move-up 600ms ease-in;
     -moz-animation: move-up 600ms ease-in;
@@ -101,7 +102,7 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #776e65;
+  color: #005f73;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer; }
@@ -141,6 +142,7 @@ hr {
   margin-top: 40px;
   position: relative;
   padding: 15px;
+  color: #776e65;
   cursor: default;
   -webkit-touch-callout: none;
   -ms-touch-callout: none;
@@ -149,7 +151,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #bbada0;
+  background: #B2EBF2;
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -220,7 +222,7 @@ hr {
   margin-right: 15px;
   float: left;
   border-radius: 3px;
-  background: rgba(238, 228, 218, 0.35); }
+  background: rgba(224, 247, 250, 0.35); }
   .grid-cell:last-child {
     margin-right: 0; }
 
@@ -323,72 +325,69 @@ hr {
   transition-property: transform; }
   .tile .tile-inner {
     border-radius: 3px;
-    background: #eee4da;
+    background: #E0F7FA;
+    color: #003B49;
     text-align: center;
     font-weight: bold;
     z-index: 10;
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
-    background: #eee4da;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #E0F7FA;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
-    background: #ede0c8;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #CAF0F7;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2;
-    background: #f2b179; }
+    background: #B3EAF3; }
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2;
-    background: #f59563; }
+    background: #9DE3F0; }
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2;
-    background: #f67c5f; }
+    background: #86DCEC; }
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2;
-    background: #f65e3b; }
+    background: #70D6E9; }
   .tile.tile-128 .tile-inner {
-    color: #f9f6f2;
-    background: #edcf72;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    color: #003b49;
+    background: #5ACFE6;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
-    color: #f9f6f2;
-    background: #edcc61;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    color: #003b49;
+    background: #43C8E2;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    color: #f9f6f2;
-    background: #edc850;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    color: #003b49;
+    background: #2DC1DF;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    color: #f9f6f2;
-    background: #edc53f;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    color: #003b49;
+    background: #16BBDC;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
-    background: #edc22e;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    color: #003b49;
+    background: #00B4D8;
+    box-shadow: 0 0 30px 10px rgba(77, 196, 225, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
     color: #f9f6f2;
-    background: #3c3a32;
+    background: #005B75;
     font-size: 30px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
@@ -519,11 +518,11 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #8f7a66;
+  background: #00A6A6;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #FFFFFF;
   height: 40px;
   line-height: 42px;
   display: block;
@@ -574,6 +573,7 @@ hr {
     margin-top: 17px;
     position: relative;
     padding: 10px;
+    color: #776e65;
     cursor: default;
     -webkit-touch-callout: none;
     -ms-touch-callout: none;
@@ -582,7 +582,7 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #bbada0;
+    background: #B2EBF2;
     border-radius: 6px;
     width: 280px;
     height: 280px;
@@ -653,7 +653,7 @@ hr {
     margin-right: 10px;
     float: left;
     border-radius: 3px;
-    background: rgba(238, 228, 218, 0.35); }
+    background: rgba(224, 247, 250, 0.35); }
     .grid-cell:last-child {
       margin-right: 0; }
 

@@ -9,15 +9,16 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
+$text-color: #005F73;
 $bright-text-color: #f9f6f2;
 
-$tile-color: #eee4da;
-$tile-gold-color: #edc22e;
+$tile-color: #E0F7FA;
+$tile-gold-color: #00B4D8;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
 $game-container-background: #bbada0;
+$board-background: #B2EBF2;
 
 $transition-speed: 100ms;
 
@@ -25,7 +26,7 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef;
+  background: #E0F7FA;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -40,6 +41,7 @@ body {
 }
 
 h1.title {
+  color: #0077B6;
   font-size: 80px;
   font-weight: bold;
   margin: 0;
@@ -69,7 +71,7 @@ h1.title {
 
   position: relative;
   display: inline-block;
-  background: $game-container-background;
+  background: #0077B6;
   padding: 15px 25px;
   font-size: $height;
   height: $height;
@@ -89,7 +91,7 @@ h1.title {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: $tile-color;
+    color: #B2EBF2;
   }
 
   .score-addition {
@@ -99,7 +101,7 @@ h1.title {
     font-size: $height;
     line-height: $height;
     font-weight: bold;
-    color: rgba($text-color, .9);
+    color: #FFFFFF;
     z-index: 100;
     @include animation(move-up 600ms ease-in);
     @include animation-fill-mode(both);
@@ -135,7 +137,7 @@ strong {
 
 hr {
   border: none;
-  border-bottom: 1px solid lighten($text-color, 40%);
+  border-bottom: 1px solid #d8d4d0;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -173,6 +175,7 @@ hr {
     margin-top: $game-container-margin-top;
     position: relative;
     padding: $grid-spacing;
+    color: #776E65;
 
     cursor: default;
     -webkit-touch-callout: none;
@@ -185,7 +188,7 @@ hr {
     -ms-touch-action: none;
     touch-action: none;
 
-    background: $game-container-background;
+    background: $board-background;
     border-radius: $tile-border-radius * 2;
     width: $field-width;
     height: $field-width;
@@ -201,7 +204,7 @@ hr {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba($tile-color, .5);
+      background: rgba(#eee4da, .5);
       z-index: 100;
 
       text-align: center;
@@ -235,7 +238,7 @@ hr {
       @include animation-fill-mode(both);
 
       &.game-won {
-        background: rgba($tile-gold-color, .5);
+        background: rgba(#edc22e, .5);
         color: $bright-text-color;
 
 	a.keep-playing-button {
@@ -318,6 +321,7 @@ hr {
     border-radius: $tile-border-radius;
 
     background: $tile-color;
+    color: #003B49;
     text-align: center;
     font-weight: bold;
     z-index: 10;
@@ -338,15 +342,15 @@ hr {
   // Colors for all 11 states, false = no special color
   $special-colors: false false, // 2
                    false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
+                   false false, // 8
+                   false false, // 16
+                   false false, // 32
+                   false false, // 64
+                   false false, // 128
+                   false false, // 256
+                   false false, // 512
+                   false false, // 1024
+                   false false; // 2048
 
   // Build tile colors
   @while $exponent <= $limit {
@@ -404,7 +408,7 @@ hr {
   // Super tiles (above 2048)
   &.tile-super .tile-inner {
     color: $bright-text-color;
-    background: mix(#333, $tile-gold-color, 95%);
+    background: #005B75;
 
     font-size: 30px;
 
@@ -463,6 +467,8 @@ hr {
 
 .restart-button {
   @include button;
+  background: #00A6A6;
+  color: #FFFFFF;
   display: block;
   text-align: center;
   float: right;
